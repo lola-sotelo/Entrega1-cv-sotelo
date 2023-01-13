@@ -1,0 +1,30 @@
+* {color: black;}
+p {
+    color: red;
+    width: 600px;
+}
+h1 {
+    border: 2px solid green;
+    padding: 4px;
+    margin: 40px 10px 20px;
+    font-weight: bold;
+    font-size: 70px;
+    color: aqua;
+    background-color: black;
+}
+section {
+    font-family: 'Montserrat', sans-serif;
+    width: 600px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+  #parrafo_prueba {
+    color: deeppink;
+    font-size: 70px;
+    border: 2px solid blue;
+  }
+  .clase_prueba {
+    color: coral;
+    font-size: 45px;
+}
