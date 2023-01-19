@@ -1,8 +1,14 @@
 * {color: black;}
+
+body {
+  background-color: aquamarine;
+}
+
 p {
-    color: red;
+    color: rgb(83, 83, 233);
     width: 600px;
 }
+
 h1 {
     border: 2px solid green;
     padding: 4px;
@@ -24,6 +30,7 @@ section {
     font-size: 70px;
     border: 2px solid blue;
   }
+  
   .clase_prueba {
     color: coral;
     font-size: 45px;

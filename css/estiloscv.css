@@ -1,0 +1,234 @@
+*{font-family: 'Montserrat', sans-serif;}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+  .navbar {
+    width: 100%;
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: rgb(245, 101, 6);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.cancel {
+  float: inline-end;
+  cursor: pointer;
+  padding: 10px;
+ 
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  max-width: 300px;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 5px;
+  background-color: white;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+  background-color: rgb(245, 101, 6);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Full-width input fields 
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}*/
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    opacity: 0.5;
+  }
+  
+  article {
+    padding:0 1em;
+  }
+  
+  section{
+    margin: 0;
+    padding: 1em;
+  }
+  
+  header, main, footer {
+    margin: 0 auto;
+  }
+  
+  header {
+    padding: 4em;
+    text-align: center;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-banner-onda-naranja-que-fluye-moderno_1035-19860.jpg?w=826&t=st=1673978914~exp=1673979514~hmac=19d721bed4309092dcbeb88389c5f5cddd4ec81c994bb5ce87ec7fc6262b7acd');
+    background-size: cover;
+    background-position: fixed;
+    color: rgb(245, 101, 6);
+  }
+  
+  header section {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+  
+  header img {
+    border-radius: 50%;
+    max-width: 150px;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+  
+  h1,h3 {
+  color: rgb(245, 101, 6);
+  }
+  
+  main {
+    max-width: 1140px;
+  }
+  
+  main section:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .course, .skills {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .course .title {
+    color: #509e98;
+    -ms-flex: 0 0 33.3%;
+    flex: 0 0 33.3%;
+    max-width: 33%;
+  }
+  
+  .course .descrition {
+    -ms-flex: 0 0 66.6%;
+    flex: 0 0 66.6%;
+    max-width: 66.6%;
+  }
+  
+  .course .descrition p {
+    padding-left: 1em;
+  }
+  
+  .skills .column {
+    -ms-flex: 0 0 50%%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .skills .column ul, ul.job-description {
+    list-style-type: none;
+  }
+  
+  .skills .column ul > li:before {
+    content: "►";
+    padding-right: 0.5em;
+    color: rgb(245, 101, 6);
+  }
+  
+  .school, .job-title {
+    text-transform: capitalize;
+  }
+  
+  .school span, .job-title span {
+    color: rgb(245, 101, 6);
+  }
+  
+  ul.job-description li:before{
+    content: "✔";
+    padding-right: 0.5em;
+    color: #509e98;
+  }
+  
+  footer {
+   padding: 1em 1.5em;
+   background: rgb(245, 101, 6);
+   color: white;
+   text-align: right;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .course {
+      display: block;
+    }
+  
+    .course .title, .course .descrition {
+      max-width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .skills {
+      display: block;
+    }
+  
+    .skills .column {
+      max-width: 100%;
+    }
+  
+    footer {
+      text-align: center;
+    }
+  }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo-final-cv</title>
+    <link rel="stylesheet" type="text/css" href="css/estiloscv.css" />
+    <script src="https://kit.fontawesome.com/70f6da2599.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+    <div class="navbar">
+        <a class="active" href="#datos"><i class="fa-solid fa-user"></i></i> Datos personales</a>
+        <a href="#experiencia"><i class="fa-solid fa-business-time"></i></i> Experiencia</a>
+        <a href="#educacion"><i class="fa-solid fa-landmark"></i></i> Educación</a>
+        <a href="#capacidades"><i class="fa-solid fa-gears"></i></i> Capacidades</a>
+
+      <header>
+        <div>
+          <img src="https://randomuser.me/api/portraits/women/53.jpg" />
+        </div>
+        <h1>Juana Ramos</h1>
+        <section>
+          <p>Hola! Soy Diseñadora Gráfica UBA y me especialicé en Diseño Web. 
+            Me dedico a diseñar y desarrollar sitios web de manera independiente para organizaciones 
+            públicas y privadas. También me apasiona compartir lo que aprendí y dicto cursos de diseño 
+            web online y en mi estudio.</p>
+        </section>
+
+        <button class="open-button" onclick="openForm()">Click para estar en contacto</button>
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <button type="button" class="cancel" onclick="closeForm()">x</button><h2>Contacto</h2>
+        
+            <label for="fname">Nombre</label>
+    <input type="text" id="fname" name="firstname" placeholder="Escribí tu nombre" required>
+
+    <label for="lname">Apellido</label>
+    <input type="text" id="lname" name="lastname" placeholder="Escribí tu apellido" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Escribí tu Email" name="email" required>
+
+    <label for="subject">Mensaje</label>
+    <textarea id="subject" name="subject" placeholder="Dejá tu mensaje aquí" style="height:200px"></textarea>
+
+    <input type="submit" value="Enviar">
+    
+    
+  </form>
+</div>
+      <script>
+          function openForm() {
+          document.getElementById("myForm").style.display = "block";
+  }
+  
+          function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+      </header>
+
+      <main>
+        <section>
+          <h3 id="datos">Datos Personales</h3>
+          <p id="demo">
+
+          </p>
+          
+          <script>
+              const persona = '{"nombre": "Nombre: Juana Ramos", "edad": "Edad: 40", "ubicacion": "Ubicación: Buenos Aires", "email": "Email: juana@estudiojm.com.ar"}'
+              const obj = JSON.parse(persona);
+              let text = "<table border='0'>"
+             for (let x in obj) {
+                text += "<tr><td>" + obj[x] + "</td></tr>";
+              }
+              text += "</table>"  
+           
+               document.getElementById("demo").innerHTML = text;
+          </script>
+        </section>
+
+        <section>
+            <h3 id="experiencia">Experiencia</h3>
+            <article>
+              <div class='job-title'>
+                <span>05.2007 - hasta la actualidad</span> <strong>Estudio Juana Ramos</strong><br> 
+                <strong>Puesto:</strong> Directora y diseñadora web
+                <p>Planifico y coordino proyectos de diseño y desarrollo web</p>
+              </div>
+              <div class='job-title'>
+                <span>05.20010 - hasta la actualidad</span> <strong>Estudio Juana Ramos</strong><br> 
+                <strong>Puesto:</strong> Profesora de diseño web
+                <p>Dicto cursos de Diseño Web (HTML5 y CSS3) para diseñadores, presencial y online.</p>
+              </div>
+            </article>
+          </section>
+        <section>
+
+            <section>
+                <h3 id="educacion">Educación</h3>
+                <article>
+                  <div class='school'>
+                    <span>2002-2007</span> <strong>FADU UBA</strong>
+                  </div>
+                  <div class="descrition">
+                    Diseñadora Gráfica
+                  </div>
+                </article>
+                <article>
+                  <div class='school'>
+                    <span>2008-2012</span> <strong>USAL</strong>
+                    <div class="descrition">
+                        Licenciada en arte y diseño digital
+                      </div>
+                </article>
+              </section>
+
+          <h3 id="capacidades">Capacidades</h3>
+          <div class='skills'>
+            <div class='column'>
+              <h4>Manejo profesional</h4>
+              <ul>
+                <li>Adobe Creative Suite</li>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript ES5/6</li>
+              </ul>
+            </div>
+            <div class='column'>
+              <h4>Manejo avanzado</h4>
+              <ul>
+                <li>Bootstrap</li>
+                <li>React</li>
+                <li>JQuery</li>
+                <li>Django</li>
+              </ul>
+            </div>
+            <div class='column'>
+              <h4>Idiomas</h4>
+              <ul>
+              <li>Español - hablante nativa</li>
+              <li>Inglés - Proficient C1/C2</li>
+              <li>Francés - Advanced - C1</li>
+            </ul>
+            </div>
+            <div class='column'>
+                <h4>Otros conocimientos</h4>
+                <ul>
+                <li>Zoom para docentes</li>
+                <li>Plataforma Moodle</li>
+                <li>Google meet para educadores</li>
+              </ul>
+              </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <p>Creado por: L0l4 2023 </p>
+      </footer>
+
+
+</body>
+</html>
