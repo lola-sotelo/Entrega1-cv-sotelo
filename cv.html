@@ -5,21 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo-final-cv</title>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="imagenes/faviconjr.png">
+    <!--acá incorporé mi hoja de estilos-->
     <link rel="stylesheet" type="text/css" href="css/estiloscv.css" />
+    <!--acá incorporé una librería para tener íconos en la navbar-->
     <script src="https://kit.fontawesome.com/70f6da2599.js" crossorigin="anonymous"></script>
+    <!--acá incorporé la fuente de Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap" rel="stylesheet">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Trabajo-final-cv" />
+    <meta property="og:type" content="Perfil" />
+    <meta property="og:url" content=" http://www.trabajofinalcv.com" />
+    <meta property="og:image" content=" https://randomuser.me/api/portraits/women/53.jpg" />
+    <meta property="og:description" content="Soy Juana Ramos. Este es mi CV. Estemos en contacto." />
+    <meta name="keywords" content="diseño grafico, diseño de paginas web, cursos online, cursos presenciales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     
 <body>
-    <div class="navbar">
-        <a class="active" href="#datos"><i class="fa-solid fa-user"></i></i> Datos personales</a>
-        <a href="#experiencia"><i class="fa-solid fa-business-time"></i></i> Experiencia</a>
-        <a href="#educacion"><i class="fa-solid fa-landmark"></i></i> Educación</a>
-        <a href="#capacidades"><i class="fa-solid fa-gears"></i></i> Capacidades</a>
-
-      <header>
+    <header>
+        <!--Acá usé la barra de navegación que pedían con links a las secciones-->
+        <div class="navbar">
+          <a class="active" href="#datos"><i class="fa-solid fa-user"></i></i> Datos personales</a>
+          <a href="#experiencia"><i class="fa-solid fa-business-time"></i></i> Experiencia</a>
+          <a href="#educacion"><i class="fa-solid fa-landmark"></i></i> Educación</a>
+          <a href="#capacidades"><i class="fa-solid fa-gears"></i></i> Capacidades</a>
+        </div>
+        <!--La imagen del usuario la tomé de la web sugerida y también la usé para el favicon, la info la inventé a modo de ejemplo-->
         <div>
           <img src="https://randomuser.me/api/portraits/women/53.jpg" />
         </div>
@@ -30,48 +45,53 @@
             públicas y privadas. También me apasiona compartir lo que aprendí y dicto cursos de diseño 
             web online y en mi estudio.</p>
         </section>
-
+        <!--incorporé un botón de contacto con un formulario popup-->
+        <!--botón para abrir el formulario popup-->
         <button class="open-button" onclick="openForm()">Click para estar en contacto</button>
+        <!--formulario popup-->
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
-            <button type="button" class="cancel" onclick="closeForm()">x</button><h2>Contacto</h2>
+            <!--botón para cerrar el form, usé una x-->
+            <button type="button" class="cancel" onclick="closeForm()"><strong>x</strong></button>
+            
+            <h2>Contacto</h2>
         
             <label for="fname">Nombre</label>
-    <input type="text" id="fname" name="firstname" placeholder="Escribí tu nombre" required>
+            <input type="text" id="fname" name="firstname" placeholder="Escribí tu nombre" required>
 
-    <label for="lname">Apellido</label>
-    <input type="text" id="lname" name="lastname" placeholder="Escribí tu apellido" required>
+            <label for="lname">Apellido</label>
+            <input type="text" id="lname" name="lastname" placeholder="Escribí tu apellido" required>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Escribí tu Email" name="email" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Escribí tu Email" name="email" required>
 
-    <label for="subject">Mensaje</label>
-    <textarea id="subject" name="subject" placeholder="Dejá tu mensaje aquí" style="height:200px"></textarea>
+            <label for="subject">Mensaje</label>
+            <textarea id="subject" name="subject" placeholder="Dejá tu mensaje aquí" style="height:200px" required></textarea>
 
-    <input type="submit" value="Enviar">
-    
-    
-  </form>
-</div>
-      <script>
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+        <!--el script para abrir y cerrar el formulario usando los que aprendimos de javascript-->
+        <script>
           function openForm() {
           document.getElementById("myForm").style.display = "block";
-  }
+          }
   
           function closeForm() {
           document.getElementById("myForm").style.display = "none";
-  }
-  </script>
+          }
+        </script>
 
-      </header>
+    </header>
 
-      <main>
+    <main>
+      <!--En esta sección probé lo que aprendimos de Json-->
         <section>
           <h3 id="datos">Datos Personales</h3>
           <p id="demo">
 
           </p>
-          
+          <!--encontré esta tabla como solución en w3schools para que el script no me devuelda los datos como un string-->
           <script>
               const persona = '{"nombre": "Nombre: Juana Ramos", "edad": "Edad: 40", "ubicacion": "Ubicación: Buenos Aires", "email": "Email: juana@estudiojm.com.ar"}'
               const obj = JSON.parse(persona);
@@ -84,7 +104,7 @@
                document.getElementById("demo").innerHTML = text;
           </script>
         </section>
-
+        <!--En las siguientes secciones usé clases para aplicar después el css, el tag strong para el énfasis y puse listas-->
         <section>
             <h3 id="experiencia">Experiencia</h3>
             <article>
@@ -99,28 +119,28 @@
                 <p>Dicto cursos de Diseño Web (HTML5 y CSS3) para diseñadores, presencial y online.</p>
               </div>
             </article>
-          </section>
+        </section>
+        <!--como elementos semánticos además de nav, header, section, usé div,article y footer-->
         <section>
-
-            <section>
-                <h3 id="educacion">Educación</h3>
-                <article>
-                  <div class='school'>
-                    <span>2002-2007</span> <strong>FADU UBA</strong>
-                  </div>
-                  <div class="descrition">
-                    Diseñadora Gráfica
-                  </div>
-                </article>
-                <article>
-                  <div class='school'>
-                    <span>2008-2012</span> <strong>USAL</strong>
-                    <div class="descrition">
-                        Licenciada en arte y diseño digital
-                      </div>
-                </article>
-              </section>
-
+            <h3 id="educacion">Educación</h3>
+            <article>
+              <div class='school'>
+                <span>2002-2007</span> <strong>Fadu uba</strong>
+              </div>
+              <div class="descrition">
+                  Diseñadora Gráfica
+              </div>
+            </article>
+            <article>
+              <div class='school'>
+                 <span>2008-2012</span><strong>usal</strong>
+              </div>
+              <div class="descrition">
+                   Licenciada en arte y diseño digital
+              </div>
+            </article>
+        </section>
+        <section>
           <h3 id="capacidades">Capacidades</h3>
           <div class='skills'>
             <div class='column'>
@@ -161,7 +181,7 @@
         </section>
 
       </main>
-
+      <!--Un ejemplo de footer para poner créditos--> 
       <footer>
         <p>Creado por: L0l4 2023 </p>
       </footer>
